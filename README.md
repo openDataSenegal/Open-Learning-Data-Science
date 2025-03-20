@@ -1,6 +1,6 @@
 # <center> Panongbene Sawadogo </center> 
 <center>
-<img src="./data/1638645196924.jpeg" alt="ArchitectureOsmozeAssistant" style="width:200px;border-radius: 100%"/>
+<img src="./data/panongbeneSawadogo." alt="ArchitectureOsmozeAssistant" style="width:200px;border-radius: 100%"/>
 </center>
 
 ### **Panongbene Jean Mohamed Sawadogo – Machine Learning Research Applied to Market Finance at Heavenize**  
