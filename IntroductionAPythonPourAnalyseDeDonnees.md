@@ -4,8 +4,7 @@
 
 Aujourd’hui, la maîtrise des outils d’analyse de données est devenue indispensable dans de nombreux domaines, que ce soit en science, en finance, en marketing ou en intelligence artificielle. **Python** s’est imposé comme l’un des langages les plus populaires pour le traitement et l’analyse de données, grâce à sa simplicité, sa flexibilité et sa richesse en bibliothèques spécialisées.  
 
-Ce cours fait partie de la formation [https://panongbene.com/Menu/Formations/e0ef6b91c5d0c1ab8c1620bfde4e7112cf67d95cbb42ca0cedb58ad9f8248de5](PYTHON POUR DATA SCIENTISTS
-) et vous propose une **initiation pratique à Python** dans le contexte de l’analyse de données. Vous découvrirez les bases du langage, ainsi que les bibliothèques essentielles comme **NumPy** pour le calcul numérique, **Pandas** pour la manipulation de données structurées, et **Matplotlib/Seaborn** pour la visualisation.  
+Ce cours fait partie de la formation [https://panongbene.com/Menu/Formations/e0ef6b91c5d0c1ab8c1620bfde4e7112cf67d95cbb42ca0cedb58ad9f8248de5](PYTHON POUR DATA SCIENTISTS) et vous propose une **initiation pratique à Python** dans le contexte de l’analyse de données. Vous découvrirez les bases du langage, ainsi que les bibliothèques essentielles comme **NumPy** pour le calcul numérique, **Pandas** pour la manipulation de données structurées, et **Matplotlib/Seaborn** pour la visualisation.  
 
 Que vous soyez étudiant, professionnel ou simplement curieux, ce cours vous donnera les **bases solides** pour exploiter Python dans vos projets data. 
 
@@ -113,15 +112,167 @@ conda --version
 pour vérifier que Conda (le gestionnaire d’environnement d’Anaconda) est bien installé.
 
 ## **IV. Structures de données essentielles**  
-- **Listes** (manipulation, slicing, méthodes)  
-- **Dictionnaires** (clé-valeur, accès et modifications)  
-- **Tuples** (immuabilité, utilisation pratique)  
 
----
+Python fournit des structures de données intégrées très puissantes et faciles à utiliser. Voici les principales à connaître pour toute analyse de données :
 
-#### **V. Projet pratique : Nettoyage de fichiers CSV simples avec Python**  
+
+### **1. Listes (`list`)**
+
+Une **liste** est une collection ordonnée et **modifiable** d’éléments. Elle peut contenir des types de données variés (entiers, chaînes, listes, etc.).
+
+- **Déclaration et accès**
+
+```python
+fruits = ['pomme', 'banane', 'orange']
+print(fruits[0])        # 'pomme'
+print(fruits[-1])       # 'orange' (index négatif : depuis la fin)
+```
+
+- **Slicing**
+
+```python
+print(fruits[0:2])      # ['pomme', 'banane']
+```
+
+- **Méthodes utiles**
+
+```python
+fruits.append('mangue')     # Ajout d'un élément
+fruits.remove('banane')     # Suppression d'un élément
+fruits.sort()               # Tri
+print(fruits)
+```
+
+### **2. Dictionnaires (`dict`)**
+
+Les **dictionnaires** permettent de stocker des paires **clé-valeur**. C’est la structure la plus utilisée pour représenter des données **structurées**.
+
+- **Déclaration**
+
+```python
+etudiant = {
+    'nom': 'Jean',
+    'age': 22,
+    'note': 16.5
+}
+```
+
+- **Accès et modification**
+
+```python
+print(etudiant['nom'])         # 'Jean'
+etudiant['age'] = 23           # Mise à jour
+etudiant['classe'] = 'Maths'   # Nouvelle entrée
+```
+
+- **Parcours**
+
+```python
+for cle, valeur in etudiant.items():
+    print(cle, ":", valeur)
+```
+
+### **3. Tuples (`tuple`)**
+
+Un **tuple** est comme une liste, mais **immuable** : une fois créé, son contenu ne peut pas être modifié. Très utile pour représenter des données **fixes** ou comme **clés de dictionnaires**.
+
+- **Déclaration**
+
+```python
+coordonnees = (45.75, -73.58)
+print(coordonnees[0])     # 45.75
+```
+- **Pourquoi utiliser un tuple ?**
+
+* Pour garantir que les données ne changent pas (ex : coordonnées GPS).
+* Meilleure performance que les listes.
+* Utilisable comme clé dans un dictionnaire :
+
+```python
+eleves = {
+    ('Jean', 'Dupont'): 14.5,
+    ('Marie', 'Durand'): 17.0
+}
+```
+
+## **V. Projet pratique : Nettoyage de fichiers CSV simples avec Python**  
 - Chargement d’un fichier CSV (`pandas.read_csv`)  
 - Exploration des données (`head()`, `info()`, `describe()`)  
 - Nettoyage (gestion des valeurs manquantes, filtrage)  
 - Export des données nettoyées  
+
+
+Dans ce projet, nous allons appliquer les bases de l'analyse de données avec la bibliothèque **Pandas**, en travaillant sur un **fichier CSV réel**.
+
+#### **1. Chargement d’un fichier CSV**
+
+On commence par importer Pandas et charger un fichier :
+
+```python
+import pandas as pd
+
+# Charger un fichier CSV
+df = pd.read_csv('penguins_lter.csv')
+```
+
+Vous pouvez aussi charger un fichier en ligne :
+
+```python
+url = "/penguins_lter.csv"
+df = pd.read_csv(url)
+```
+
+#### **2. Exploration des données**
+
+Première inspection pour comprendre la structure du jeu de données :
+
+```python
+df.head()        # Affiche les 5 premières lignes
+df.tail()        # Les 5 dernières
+df.shape         # Dimensions (lignes, colonnes)
+df.info()        # Types de colonnes, valeurs nulles
+df.describe()    # Statistiques descriptives
+df.columns       # Liste des noms de colonnes
+```
+
+#### **3. Nettoyage des données**
+
+Le nettoyage est essentiel pour fiabiliser l'analyse.
+
+**a. Gestion des valeurs manquantes**
+
+```python
+df.isnull().sum()                # Nombre de valeurs manquantes par colonne
+df = df.dropna()                 # Supprimer les lignes contenant des valeurs nulles
+# OU
+df['Culmen Depth (mm)'].fillna(df['Culmen Depth (mm)'].mean(), inplace=True)   # Remplacer les valeurs nulles par la moyenne
+```
+
+**b. Suppression ou renommage de colonnes :**
+
+```python
+df = df.drop(columns=['Comments'])
+df.rename(columns={'Culmen Length (mm)': 'Culmen_Length_mm'}, inplace=True)
+```
+
+**c. Filtrage de lignes :**
+
+```python
+df = df[df['Culmen_Length_mm'] >= 10]   # Garder uniquement les élèves avec une note ≥ 10
+```
+
+**d. Formatage des données :**
+
+```python
+df['Stage'] = df['Stage'].str.upper()   # Nom en majuscules
+df['Date Egg'] = pd.to_datetime(df['Date Egg'])  # Conversion en datetime
+```
+
+#### **4. Export des données nettoyées**
+
+Après nettoyage, on peut sauvegarder le fichier :
+
+```python
+df.to_csv('donnees_nettoyees.csv', index=False)
+```
 
