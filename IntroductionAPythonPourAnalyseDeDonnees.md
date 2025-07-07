@@ -54,22 +54,70 @@ Grâce à sa **communauté mondiale**, Python bénéficie d’une **documentatio
 
 En plus de cela, n'importe qui peut développer une bibliothèque Python et la mettre à disposition des utilisateurs.
 
-### **3. Python comme couteau suisse d'accès aux données**  
+**E. Python comme couteau suisse d'accès aux données**  
 Python permet de **connecter, importer et exporter** des données depuis presque toutes les sources :  
 - **Fichiers locaux** : CSV (`pandas.read_csv`), Excel (`openpyxl`), JSON  
 - **Bases de données** : SQL (SQLite, PostgreSQL via `sqlalchemy`), NoSQL  
 - **APIs et Web Scraping** : `requests`, `BeautifulSoup`, `Scrapy`  
 - **Big Data** : Intégration avec PySpark, Dask  
 
-## **III. Environnement de travail**  
-- **Jupyter Notebook** (interactivité, visualisation)  
-- **VS Code** (configuration pour la Data Science)  
-- **Google Colab** (traitement dans le cloud)  
+**Exemple** : **Instagram** est codé en Python,  c’est l’un des langages principaux utilisés par les ingénieurs de chez Google, **Netflix** utilise Python pour l’élaboration de ses algorithmes de recommandation ;
+
+---
+
+## **III. Installer Python via Anaconda**
+
+La manière la plus simple et recommandée pour commencer en Data Science avec Python est d’utiliser la **distribution Anaconda**.
+
+**Anaconda** est une plateforme tout-en-un qui installe :
+
+* **Python** (avec gestion d'environnements virtuels)
+* Plus de **250 bibliothèques scientifiques** (Pandas, NumPy, SciPy, etc.)
+* Des outils puissants comme **Jupyter Notebook** et **Spyder**
+* Un gestionnaire graphique : **Anaconda Navigator**
+
+
+#### **Sur Windows ou macOS** :
+
+Pour installer Anaconda sur une machine **Windows** ou **macOS** :
+
+1. Rendez-vous sur le site officiel : [https://www.anaconda.com/products/distribution](https://www.anaconda.com/products/distribution)
+   
+3. Téléchargez l’installeur graphique correspondant à votre système (Windows/macOS).
+
+4. Double-cliquez sur le fichier téléchargé pour lancer l’installation.
+
+5. Lors de l’installation, vous pouvez **conserver les options par défaut**, elles conviennent à la plupart des usages.
+
+6. Une fois l’installation terminée, vérifiez que tout fonctionne en lançant l’application **Jupyter Notebook** (disponible via le menu Anaconda Navigator ou depuis un terminal avec la commande `jupyter notebook`).
+
+#### **Sur Linux** :
+
+Vous pouvez installer Anaconda en ligne de commande. Voici les étapes recommandées :
+
+```bash
+cd /tmp
+curl -O https://repo.anaconda.com/archive/Anaconda3-5.2.0-Linux-x86_64.sh
+sha256sum Anaconda3-5.2.0-Linux-x86_64.sh  # (facultatif mais recommandé)
+bash Anaconda3-5.2.0-Linux-x86_64.sh       # Lancer l'installation
+source ~/.bashrc                           # Activer Anaconda
+```
+
+> Vous pouvez remplacer la version `5.2.0` par une version plus récente disponible sur le site officiel si besoin.
+
+Après installation, testez la commande :
+
+```bash
+conda --version
+```
+pour vérifier que Conda (le gestionnaire d’environnement d’Anaconda) est bien installé.
 
 ## **IV. Structures de données essentielles**  
 - **Listes** (manipulation, slicing, méthodes)  
 - **Dictionnaires** (clé-valeur, accès et modifications)  
 - **Tuples** (immuabilité, utilisation pratique)  
+
+---
 
 #### **V. Projet pratique : Nettoyage de fichiers CSV simples avec Python**  
 - Chargement d’un fichier CSV (`pandas.read_csv`)  
