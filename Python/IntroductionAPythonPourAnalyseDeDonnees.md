@@ -4,7 +4,7 @@
 
 Aujourd’hui, la maîtrise des outils d’analyse de données est devenue indispensable dans de nombreux domaines, que ce soit en science, en finance, en marketing ou en intelligence artificielle. **Python** s’est imposé comme l’un des langages les plus populaires pour le traitement et l’analyse de données, grâce à sa simplicité, sa flexibilité et sa richesse en bibliothèques spécialisées.  
 
-Ce cours fait partie de la formation [https://panongbene.com/Menu/Formations/e0ef6b91c5d0c1ab8c1620bfde4e7112cf67d95cbb42ca0cedb58ad9f8248de5](PYTHON POUR DATA SCIENTISTS) et vous propose une **initiation pratique à Python** dans le contexte de l’analyse de données. Vous découvrirez les bases du langage, ainsi que les bibliothèques essentielles comme **NumPy** pour le calcul numérique, **Pandas** pour la manipulation de données structurées, et **Matplotlib/Seaborn** pour la visualisation.  
+Ce cours fait partie de la formation [PYTHON POUR DATA SCIENTISTS](https://panongbene.com/Menu/Formations/e0ef6b91c5d0c1ab8c1620bfde4e7112cf67d95cbb42ca0cedb58ad9f8248de5) et vous propose une **initiation pratique à Python** dans le contexte de l’analyse de données. Vous découvrirez les bases du langage, ainsi que les bibliothèques essentielles comme **NumPy** pour le calcul numérique, **Pandas** pour la manipulation de données structurées, et **Matplotlib/Seaborn** pour la visualisation.  
 
 Que vous soyez étudiant, professionnel ou simplement curieux, ce cours vous donnera les **bases solides** pour exploiter Python dans vos projets data. 
 
