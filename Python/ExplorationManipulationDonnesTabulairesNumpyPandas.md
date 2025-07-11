@@ -1,3 +1,11 @@
+# <center>Panongbene Sawadogo</center>
+
+📩 **Contact** : amet1900@gmail.com
+
+🌐 **Linkedin** : https://www.linkedin.com/in/panongbene-jean-mohamed-sawadogo-33234a168/
+
+🗓️ **Dernière modification** : 14 juillet 2025
+
 # **Exploration et Manipulation des Données Tabulaire avec Python, NumPy et Pandas**
 
 ## I. Introduction
