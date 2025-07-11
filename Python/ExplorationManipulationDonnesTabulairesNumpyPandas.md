@@ -2,7 +2,7 @@
 
 📩 **Contact** : amet1900@gmail.com
 
-🌐 **Linkedin** : https://www.linkedin.com/in/panongbene-jean-mohamed-sawadogo-33234a168/
+🌐 **Linkedin** : [Linkedin Panongbene]([https://numpy.org/doc/stable/](https://www.linkedin.com/in/panongbene-jean-mohamed-sawadogo-33234a168/)
 
 🗓️ **Dernière modification** : 14 juillet 2025
 
