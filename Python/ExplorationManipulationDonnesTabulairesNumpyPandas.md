@@ -395,9 +395,26 @@ plt.title('Revenu par produit')
 plt.show()
 ```
 
-#### Ressources Complémentaires
-- Documentation officielle :
-  - [NumPy](https://numpy.org/doc/stable/)
-  - [Pandas](https://pandas.pydata.org/docs/)
-  - [SQLAlchemy](https://docs.sqlalchemy.org/)
-  - [Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/client/python-api/current/index.html)
+* [*Panongbene*](https://panongbene.com/Menu/Cours%20Ouverts)
+---
+
+### **Documentation officielle**
+
+* [NumPy](https://numpy.org/doc/) : Guide complet, tutoriels, références d'API
+* [Pandas](https://pandas.pydata.org/docs/) : Guide utilisateur, cookbook, documentation API
+
+---
+
+
+### **Livres recommandés**
+
+* [*MACHINE LEARNING WITH PYTHON COOKBOOK PATRICAL SOLUTION FROM PREPROCESSING TO DEEP LEARNING*](https://panongbene.com/Menu/Biblioth%C3%A8que/bc641ed79d07381648e8ec142308803e7169189883e8f783f638ab4e1de9b84a) 
+* [*INTRODUCTION TO SCIENTIFIC PROGRAMMING WITH PYTHON*](https://panongbene.com/Menu/Biblioth%C3%A8que/b8df40bb8dfb7df49a4cccf04fdf162311e12589bf8d2dc38cdf9300b6bb62b7) 
+
+---
+
+### **Environnements de pratique**
+
+* [Google Colab](https://colab.research.google.com/) – Notebooks Python dans le cloud, gratuit
+* [Jupyter Notebook](https://jupyter.org/) – Environnement interactif local
+* [Anaconda](https://www.anaconda.com/) – Distribution Python complète pour la data science
